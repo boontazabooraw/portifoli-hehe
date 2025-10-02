@@ -1,9 +1,9 @@
-import Image from "next/image";
+import AccordionWrapper from "../components/AccordionWrapper";
 
 export default function Home() {
   return (
     <div className="">
-      a
+      <AccordionWrapper />
     </div>
   );
 }
