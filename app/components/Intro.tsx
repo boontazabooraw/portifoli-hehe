@@ -7,10 +7,21 @@ import Image from "next/image";
 
 const Intro = () => {
   return (
-    <div className="flex flex-row h-full w-full justify-between items-center gap-5 px-15 pb-10">
+    <div className="flex flex-row md:flex-col md:justify-center h-full w-full justify-between items-center gap-5 px-15 pb-10">
       <div className="flex flex-col gap-5 w-60">
+        <div className="md:flex flex-col w-full hidden">
+          <Image
+            src={"/Images/Yeah.jpg"}
+            alt="Hell yeah"
+            width={150}
+            height={150}
+            quality={100}
+          />
+        </div>
         <div>
-          <h1 className="text-xl font-bold tracking-wide">Hello, I&apos;m Leonard</h1>
+          <h1 className="text-xl font-bold tracking-wide">
+            Hello, I&apos;m Leonard
+          </h1>
           <h1 className="text-xs">Frontend Web Developer and Designer</h1>
           <div className="flex flex-row gap-2 items-center pt-2">
             <FaHtml5 size={15} />
@@ -30,7 +41,7 @@ const Intro = () => {
         </div>
       </div>
       <div>
-        <div className="flex flex-col gap-5 w-full">
+        <div className="flex flex-col w-full md:hidden">
           <Image
             src={"/Images/Yeah.jpg"}
             alt="Hell yeah"
