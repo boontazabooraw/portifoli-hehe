@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
+import React from "react";
 import { useMediaQuery } from "react-responsive";
 
 const AccordionItem = ({
@@ -23,13 +24,19 @@ const AccordionItem = ({
     query: "(min-width: 768px)",
   });
 
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <motion.div
       onMouseEnter={() => setSelectedIndex(index)}
       onMouseLeave={() => setSelectedIndex(null)}
       initial={{
-        ...(!isNotSmall && { height: "50vh" }),
-        ...(isNotSmall && { height: "100vh" }),
+        ...(mounted && !isNotSmall && { height: "50vh" }),
+        ...(mounted && isNotSmall && { height: "100vh" }),
       }}
       animate={{
         ...(!isNotSmall && { height: isSelected ? "100vh" : "50vh" }),
