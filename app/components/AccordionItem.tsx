@@ -7,11 +7,13 @@ const AccordionItem = ({
   index,
   selectedIndex,
   setSelectedIndex,
+  title,
 }: {
   children: React.ReactNode;
   index: number;
   selectedIndex: number | null;
   setSelectedIndex: (index: number | null) => void;
+  title: string;
 }) => {
   const isSelected = selectedIndex === index;
 
@@ -26,8 +28,11 @@ const AccordionItem = ({
         height: isSelected ? "100vh" : "50vh",
       }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="w-full border-2 overflow-hidden"
+      className="w-full overflow-hidden"
     >
+      <div className="top-4 left-4 z-10 font-bold ">
+        {title}
+      </div>
       <AnimatePresence>
         {isSelected && (
           <motion.div
