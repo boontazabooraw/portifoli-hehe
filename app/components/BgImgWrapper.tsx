@@ -11,7 +11,7 @@ const BgImgWrapper = () => {
         fill
         priority
         quality={100}
-        className="brightness-50"
+        className="brightness-70"
         style={{ objectFit: "cover" }}
       />
     </>

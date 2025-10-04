@@ -1,4 +1,5 @@
 "use client";
+
 import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
