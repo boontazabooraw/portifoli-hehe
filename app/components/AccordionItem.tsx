@@ -43,9 +43,16 @@ const AccordionItem = ({
         ...(isNotSmall && { width: isSelected ? "100vw" : "50vw" }),
       }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className={`w-full overflow-hidden ${background}`}
+      className={`w-full overflow-hidden border-2 border-white/5 ${background}`}
     >
-      <div className="top-4 left-4 z-10 font-bold ">{title}</div>
+      <div
+        className={`top-4 left-4 z-10 ${
+          isSelected ? "opacity-0" : "opacity-80"
+        } transition-opacity duration-400`}
+      >
+        <h1
+        className="font-semibold tracking-widest">{title}</h1>
+      </div>
       <AnimatePresence>
         {isSelected && (
           <motion.div

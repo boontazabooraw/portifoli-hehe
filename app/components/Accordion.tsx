@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import AccordionItem from "./AccordionItem";
-import Intro from "./Intro";
+import Intro from "./Sections/Intro";
 
 const Accordion = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -14,7 +14,7 @@ const Accordion = () => {
         index={0}
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
-        background="bg-red-900"
+        background="bg-black/20 bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-10"
       >
         <Intro />
       </AccordionItem>
@@ -23,7 +23,7 @@ const Accordion = () => {
         index={1}
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
-        background="bg-blue-900"
+        background="bg-black/30 bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-10"
       >
         <h1>PROJECTS COMPONENT</h1>
       </AccordionItem>
@@ -32,7 +32,7 @@ const Accordion = () => {
         index={2}
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
-        background="bg-yellow-900"
+        background="bg-black/40 bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-10"
       >
         <h1>CONTACT COMPONENT</h1>
       </AccordionItem>
