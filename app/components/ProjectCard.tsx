@@ -34,59 +34,108 @@ const ProjectCard = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
+  
 
   return (
-    <div className="w-full">
-      {" "}
-      <div className="mx-auto max-w-xs">
-        <Carousel setApi={setApi} className="w-full max-w-xs">
-          <CarouselContent>
-            {/* {Array.from({ length: 3 }).map((_, index) => (
-              <CarouselItem key={index}>
-                <Card>
-                  <CardContent className="flex aspect-video items-center justify-center p-6">
-                    <span className="text-4xl font-semibold">{index + 1}</span>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))} */}
-            {ProjectData.map((proj) => (
-              <CarouselItem key={proj.id}>
-                <Card>
-                  <CardHeader className="w-full flex flex-col p-5">
-                    <div className="">
+    // <div className="absolute flex flex-col w-full h-full items-center justify-center">
+    //   <Carousel setApi={setApi} className="w-[70%]">
+    //     <CarouselContent className="w-full h-full">
+    //       {/* {Array.from({ length: 3 }).map((_, index) => (
+    //           <CarouselItem key={index}>
+    //             <Card>
+    //               <CardContent className="flex aspect-video items-center justify-center p-6">
+    //                 <span className="text-4xl font-semibold">{index + 1}</span>
+    //               </CardContent>
+    //             </Card>
+    //           </CarouselItem>
+    //         ))} */}
+    //       {ProjectData.map((proj) => (
+    //         <CarouselItem key={proj.id} className="">
+    //           <Card>
+    //             <CardHeader className="w-full p-5">
+    //               <div className="">
+    //                 <Image
+    //                   src={proj.imgpath}
+    //                   alt="Project preview"
+    //                   width={300}
+    //                   height={300}
+    //                   quality={100}
+    //                   className=" object-contain opacity-80"
+    //                 />
+    //               </div>
+    //               <div className="flex flex-col">
+    //                 <a href={proj.url} target="_blank">
+    //                   <h1 className="font-bold">{proj.name}</h1>
+    //                 </a>
+    //                 <span className="text-xs">{proj.desc}</span>
+    //               </div>
+    //             </CardHeader>
+    //           </Card>
+    //         </CarouselItem>
+    //       ))}
+    //     </CarouselContent>
+    //     <CarouselPrevious />
+    //     <CarouselNext />
+    //   </Carousel>
+    //   <div className="flex flex-row items-center justify-center gap-2 border-2 border-amber-300 ">
+    //     {Array.from({ length: 4 }).map((_, id) => (
+    //       <button
+    //         key={id}
+    //         onClick={() => api?.scrollTo(id)}
+    //         className={cn("h-3.5 w-3.5 rounded-full border-1", {
+    //           "border-white/20 ": current === id + 1,
+    //         })}
+    //       />
+    //     ))}
+    //   </div>
+    // </div>
+
+    <div className="mx-auto max-w-xs">
+      <Carousel setApi={setApi} className="w-full max-w-xs">
+        <CarouselContent>
+          {ProjectData.map((proj) => (
+            <CarouselItem key={proj.id}>
+              <Card className="">
+                <CardContent className="flex aspect-video items-center justify-center p-6">
+                  <div className="flex flex-col gap-2">
+                    <a
+                      href={proj.url}
+                      target="_blank"
+                      className="cursor-default"
+                    >
                       <Image
                         src={proj.imgpath}
                         alt="Project preview"
                         width={300}
                         height={300}
+                        style={{
+                          width: "100%",
+                          maxWidth: "290px",
+                          height: "auto",
+                        }}
                         quality={100}
-                        className=" object-contain opacity-80"
+                        className="hover:brightness-110 opacity-80 rounded-2xl duration-300 transition-all"
                       />
-                    </div>
-                    <div className="flex flex-col">
-                      <h1 className="font-bold">{proj.name}</h1>
-                      <span className="text-xs">{proj.desc}</span>
-                    </div>
-                  </CardHeader>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-        <div className="mt-4 flex items-center justify-center gap-2">
-          {Array.from({ length: 4 }).map((_, id) => (
-            <button
-              key={id}
-              onClick={() => api?.scrollTo(id)}
-              className={cn("h-3.5 w-3.5 rounded-full border-1", {
-                "border-white/20 ": current === id + 1,
-              })}
-            />
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            </CarouselItem>
           ))}
-        </div>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+      <div className="flex flex-row items-center justify-center gap-2 mt-2">
+        {Array.from({ length: 4 }).map((_, id) => (
+          <button
+            key={id}
+            onClick={() => api?.scrollTo(id)}
+            className={cn("h-3.5 w-3.5 rounded-full border-1", {
+              "border-white/20 ": current === id + 1,
+            })}
+          />
+        ))}
       </div>
     </div>
   );

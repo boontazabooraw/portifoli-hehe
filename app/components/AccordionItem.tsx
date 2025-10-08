@@ -10,14 +10,12 @@ const AccordionItem = ({
   selectedIndex,
   setSelectedIndex,
   title,
-  background,
 }: {
   children: React.ReactNode;
   index: number;
   selectedIndex: number | null;
   setSelectedIndex: (index: number | null) => void;
   title: string;
-  background: string;
 }) => {
   const isSelected = selectedIndex === index;
   const isNotSmall = useMediaQuery({

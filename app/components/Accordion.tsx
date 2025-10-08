@@ -15,7 +15,6 @@ const Accordion = () => {
         index={0}
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
-        background="bg-black/20"
       >
         <Intro />
       </AccordionItem>
@@ -24,7 +23,6 @@ const Accordion = () => {
         index={1}
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
-        background="bg-black/30"
       >
         <Projects />
       </AccordionItem>
@@ -33,7 +31,6 @@ const Accordion = () => {
         index={2}
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
-        background="bg-black/90"
       >
         <h1>CONTACT COMPONENT</h1>
       </AccordionItem>
