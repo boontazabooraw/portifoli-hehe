@@ -11,7 +11,7 @@ const ContactForm = () => {
           placeholder="Email"
         />
       </div>
-      <div className="w-full mt-2">
+      <div className="w-full mt-1.5">
         <textarea
           rows={4}
           className="border-1 border-white/50 p-2 focus:outline-none w-full resize-none"
@@ -21,6 +21,7 @@ const ContactForm = () => {
 
       <button
         type="submit"
+        disabled={true}
         className="border-1 border-white/50 rounded-b-xl w-full p-2 hover:bg-black/50 duration-500 transition-colors"
       >
         <span className="text-sm">Submit</span>
