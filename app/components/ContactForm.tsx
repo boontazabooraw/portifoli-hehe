@@ -4,23 +4,26 @@ import useForm from "react-hook-form";
 
 const ContactForm = () => {
   return (
-    <form className="flex flex-col gap-2 justify-center items-center">
-      <div>
-        <input className="border-1 p-2 w-full" placeholder="Email" />
+    <form className="flex flex-col w-full">
+      <div className="flex w-full ">
+        <input
+          className="border-1 border-white/50 p-2 focus:outline-none w-full"
+          placeholder="Email"
+        />
       </div>
-      <div className="w-full">
+      <div className="w-full mt-2">
         <textarea
           rows={4}
-          className="border-1 p-2 w-full "
+          className="border-1 border-white/50 p-2 focus:outline-none w-full resize-none"
           placeholder="Type your message here"
         />
       </div>
+
       <button
         type="submit"
-        disabled={true}
-        className="border-1 rounded-lg w-20 p-2"
+        className="border-1 border-white/50 rounded-b-xl w-full p-2 hover:bg-black/50 duration-500 transition-colors"
       >
-        <span className="">Submit</span>
+        <span className="text-sm">Submit</span>
       </button>
     </form>
   );
