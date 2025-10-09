@@ -4,6 +4,7 @@ import { useState } from "react";
 import AccordionItem from "./AccordionItem";
 import Intro from "./Sections/Intro";
 import Projects from "./Sections/Projects";
+import Contact from "./Sections/Contact";
 
 const Accordion = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -32,7 +33,7 @@ const Accordion = () => {
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
       >
-        <h1>CONTACT COMPONENT</h1>
+        <Contact />
       </AccordionItem>
     </div>
   );

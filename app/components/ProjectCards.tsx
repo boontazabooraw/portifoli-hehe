@@ -7,7 +7,10 @@ const ProjectCards = () => {
   return (
     <div className="lg:grid grid-cols-2 grid-rows-2 flex flex-col gap-2">
       {ProjectData.map((proj) => (
-        <div key={proj.id} className=" border-1 border-white/30 rounded-2xl p-4 ">
+        <div
+          key={proj.id}
+          className=" border-1 border-white/30 rounded-2xl p-4 "
+        >
           <a href={proj.url} target="_blank" className="cursor-default">
             <Image
               src={proj.imgpath}
@@ -17,7 +20,6 @@ const ProjectCards = () => {
               className="rounded-2xl opacity-80"
             />
           </a>
-          
         </div>
       ))}
     </div>
