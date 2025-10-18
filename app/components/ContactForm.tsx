@@ -8,6 +8,12 @@ const ContactForm = () => {
       <div className="flex w-full ">
         <input
           className="border-1 border-white/50 p-2 focus:outline-none w-full"
+          placeholder="Jonny Craig"
+        />
+      </div>
+      <div className="flex w-full mt-1.5">
+        <input
+          className="border-1 border-white/50 p-2 focus:outline-none w-full"
           placeholder="Email"
         />
       </div>
