@@ -49,7 +49,7 @@ const AccordionItem = ({
         }),
       }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className={`w-full overflow-hidden transition-colors duration-800 border-1 md:border-3 border-white/10 rounded-xl`}
+      className={`w-full overflow-hidden transition-colors duration-800 border-1 md:border-3 border-white/10`}
     >
       <div
         className={`top-4 left-4 z-10 ${
