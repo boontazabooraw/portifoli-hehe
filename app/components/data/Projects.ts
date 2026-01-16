@@ -12,27 +12,41 @@ export const ProjectData: IProject[] = [
     name: "Guitar Habit Music Hub",
     desc: "Guitar Habit Music Hub's Unofficial Website",
     imgpath: "/Images/ProjectImgs/01.png",
-    url: "https://guitarhabit.vercel.app/"
+    url: "https://guitarhabit.vercel.app/",
   },
   {
     id: 2,
     name: "Tipidicuts",
     desc: "Tipidicuts' Landing Page",
     imgpath: "/Images/ProjectImgs/02.png",
-    url: "https://tipidicuts.vercel.app/"
+    url: "https://tipidicuts.vercel.app/",
   },
   {
     id: 3,
     name: "Erl, The Bird Landing Page",
-    desc: "The band's landing page",
+    desc: "Pop-punk band from Cavite's landing page",
     imgpath: "/Images/ProjectImgs/03.png",
-    url: "https://erlthebird.vercel.app/"
+    url: "https://erlthebird.vercel.app/",
   },
   {
     id: 4,
     name: "LeSource",
     desc: "Resources (software, etc.) I made for personal use and other peers",
     imgpath: "/Images/ProjectImgs/04.png",
-    url: "https://lesource.netlify.app/"
+    url: "https://lesource.netlify.app/",
+  },
+  {
+    id: 5,
+    name: "LeOCR",
+    desc: "OCR Tool made with Tesseract.js",
+    imgpath: "/Images/ProjectImgs/05.png",
+    url: "https://leocr.vercel.app/",
+  },
+  {
+    id: 6,
+    name: "LeOCR",
+    desc: "A simple IP Detection using ip-api",
+    imgpath: "/Images/ProjectImgs/06.png",
+    url: "https://nasanako.vercel.app/",
   },
 ];

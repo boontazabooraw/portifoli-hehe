@@ -9,21 +9,12 @@ import Image from "next/image";
 const Intro = () => {
   return (
     <div className="flex flex-row md:flex-col md:justify-center h-full w-full justify-between items-center gap-5 px-15 pb-10">
-      <div className="flex flex-col gap-5 w-60">
-        <div className="md:flex flex-col w-full hidden">
-          <Image
-            src={"/Images/Yeah.jpg"}
-            alt="Hell yeah"
-            width={150}
-            height={150}
-            quality={100}
-          />
-        </div>
+      <div className="flex flex-col gap-5 lg:gap-3 w-60 lg:w-80">
         <div>
-          <h1 className="text-xl font-bold tracking-wide">
+          <h1 className="text-xl lg:text-3xl font-bold tracking-wide">
             Hello, I&apos;m Leonard
           </h1>
-          <h1 className="text-xs">Frontend Web Developer and Designer</h1>
+          <h1 className="text-xs lg:text-lg">Frontend Web Developer and Designer</h1>
           <div className="flex flex-row gap-2 items-center pt-2">
             <FaHtml5 size={15} />
             <FaCss3Alt size={15} />

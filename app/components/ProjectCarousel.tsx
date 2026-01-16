@@ -33,6 +33,7 @@ const ProjectCarousel = () => {
   return (
     <div className="mx-auto max-w-100">
       <Carousel setApi={setApi} className="w-full max-w-xs">
+        <h1>A</h1>
         <CarouselContent>
           {ProjectData.map((proj) => (
             <CarouselItem key={proj.id}>

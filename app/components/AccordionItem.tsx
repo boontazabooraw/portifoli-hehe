@@ -56,7 +56,7 @@ const AccordionItem = ({
           isSelected ? "opacity-0" : "opacity-80"
         } transition-opacity duration-400`}
       >
-        <h1 className="font-semibold tracking-widest">{title}</h1>
+        <h1 className="tracking-widest">{title}</h1>
       </div>
       <AnimatePresence>
         {isSelected && (
