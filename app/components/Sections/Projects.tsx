@@ -17,7 +17,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="flex h-full w-full justify-center items-center gap-5 px-15 pb-10 lg:flex-col">
+    <div className="flex h-full w-full justify-center items-center gap-5 px-15 pb-10 flex-col">
       <h1 className="text-2xl tracking-widest">Projects</h1>
       {isNotSmall ? <ProjectCards /> : <ProjectCarousel />}
     </div>

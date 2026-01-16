@@ -33,13 +33,12 @@ const ProjectCarousel = () => {
   return (
     <div className="mx-auto max-w-100">
       <Carousel setApi={setApi} className="w-full max-w-xs">
-        <h1>A</h1>
         <CarouselContent>
           {ProjectData.map((proj) => (
             <CarouselItem key={proj.id}>
               <Card className="">
-                <CardContent className="flex aspect-video items-center justify-center p-6">
-                  <div className="flex flex-col gap-2  overflow-hidden">
+                <CardContent className="flex aspect-video items-center justify-center p-5">
+                  <div className="flex flex-col gap-2 overflow-hidden">
                     <a
                       href={proj.url}
                       target="_blank"
@@ -73,8 +72,8 @@ const ProjectCarousel = () => {
         {/* <CarouselPrevious />
         <CarouselNext /> */}
       </Carousel>
-      <div className="flex flex-row items-center justify-center gap-2 mt-2">
-        {Array.from({ length: 4 }).map((_, id) => (
+      <div className="flex flex-row items-center opacity-50 justify-center gap-2 mt-2">
+        {Array.from({ length: 6 }).map((_, id) => (
           <button
             key={id}
             onClick={() => api?.scrollTo(id)}

@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const ProjectCards = () => {
   return (
-    <div className="lg:grid grid-cols-2 grid-rows-2 flex flex-col gap-2">
+    <div className="md:grid grid-cols-2 grid-rows-2 flex flex-col gap-2">
       {ProjectData.map((proj) => (
         <div
           key={proj.id}
-          className="border-1 border-white/30 rounded-2xl p-4 "
+          className="border-1 border-white/20 rounded-2xl p-2"
         >
           <a
             href={proj.url}
@@ -24,7 +24,7 @@ const ProjectCards = () => {
               alt="Project Preview"
               width={200}
               height={200}
-              className="rounded-2xl opacity-80  hover:brightness-30 transition-all duration-300"
+              className="rounded-2xl opacity-80 hover:brightness-30 transition-all duration-300"
             />
           </a>
         </div>
