@@ -31,7 +31,7 @@ const ProjectCarousel = () => {
   }, [api]);
 
   return (
-    <div className="mx-auto max-w-100">
+    <div className=" max-w-100">
       <Carousel setApi={setApi} className="w-full max-w-xs">
         <CarouselContent>
           {ProjectData.map((proj) => (
@@ -73,7 +73,7 @@ const ProjectCarousel = () => {
         <CarouselNext /> */}
       </Carousel>
       <div className="flex flex-row items-center opacity-50 justify-center gap-2 mt-2">
-        {Array.from({ length: 6 }).map((_, id) => (
+        {Array.from({ length: 8 }).map((_, id) => (
           <button
             key={id}
             onClick={() => api?.scrollTo(id)}

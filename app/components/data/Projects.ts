@@ -44,9 +44,23 @@ export const ProjectData: IProject[] = [
   },
   {
     id: 6,
-    name: "LeOCR",
+    name: "whoami",
     desc: "A simple IP Detection using ip-api",
     imgpath: "/Images/ProjectImgs/06.png",
     url: "https://nasanako.vercel.app/",
+  },
+  {
+    id: 7,
+    name: "Vapeshops in Bataan Public API",
+    desc: "Vapeshops in Bataan API; Express.js, Supabase, CORS enabled, and with rate-limiting",
+    imgpath: "/Images/ProjectImgs/07.png",
+    url: "https://github.com/boontazabooraw/vapeshoba",
+  },
+  {
+    id: 8,
+    name: "Random Password Generator API",
+    desc: "Password Generator API built mainly for personal use; Express.js, CORS enabled",
+    imgpath: "/Images/ProjectImgs/08.png",
+    url: "https://psjn.vercel.app/",
   },
 ];
